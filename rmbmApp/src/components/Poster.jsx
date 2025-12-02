@@ -39,6 +39,9 @@ export default function Poster() {
           <div className='info-detail'>
             WYKONAWCA: <span>KRZYSZTOF WRÓBEL</span>
           </div>
+          <div className='info-detail'>
+            TECHNIK BHP: <span>MARTYNA POPŁAWSKA</span>
+          </div>
         </div>
       </div>
 
@@ -54,6 +57,7 @@ export default function Poster() {
           <Czlonek
             zdjecie={czlonkowie[0].zdjecie}
             nazwa={czlonkowie[0].nazwa}
+            imieNazwisko={czlonkowie[0].imieNazwisko}
           />
         </div>
 
@@ -64,6 +68,7 @@ export default function Poster() {
               key={index + 1}
               zdjecie={czlonek.zdjecie}
               nazwa={czlonek.nazwa}
+              imieNazwisko={czlonek.imieNazwisko}
             />
           ))}
         </div>
