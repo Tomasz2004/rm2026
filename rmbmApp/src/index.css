@@ -1,1 +1,6 @@
 /* Globalny reset został przeniesiony do Poster.css */
+:root {
+  --main-background: #fcdc0b;
+  --main-black: #000000;
+  --main-red: #af2b1d;
+}

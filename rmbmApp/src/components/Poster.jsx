@@ -1,113 +1,77 @@
-import Przewo from './Przewo';
 import Czlonek from './Czlonek';
+import czlonkowie from '../consts/czlonkowie.jsx';
 
 export default function Poster() {
-  const czlonkowie = [
-    {
-      zdjecie: '/dawidcyb.jpeg',
-      nazwa: 'SPECJALISTA DS. BETONOWANIA',
-      moc: '95% Efektywności',
-      funkcja: 'Mistrz Mikserem',
-      ikona: '🪛',
-    },
-    {
-      zdjecie: '/oskar.jpeg',
-      nazwa: 'EKSPERT POMIAROWY',
-      moc: 'Co do Milimetra',
-      funkcja: 'Geometra Terenowy',
-      ikona: '📐',
-    },
-    {
-      zdjecie: '/dawidsid.jpeg',
-      nazwa: 'MISTRZ WYKOŃCZENIOWY',
-      moc: 'Premium Finish',
-      funkcja: 'Malarz-Tapeciarz',
-      ikona: '🖌️',
-    },
-    {
-      zdjecie: '/szymon.jpeg',
-      nazwa: 'ELEKTRYK DYŻURNY',
-      moc: 'Pod Wysokim',
-      funkcja: 'Instalator Światła',
-      ikona: '🔌',
-    },
-    {
-      zdjecie: '/krzysiek.jpeg',
-      nazwa: 'HYDRAULIK RATUNKOWY',
-      moc: '100% Gwarancji',
-      funkcja: 'Pogromca Przecieków',
-      ikona: '🔧',
-    },
-    {
-      zdjecie: '/martyna.jpg',
-      nazwa: 'KOORDYNATOR LOGISTYKI',
-      moc: 'Perfekcyjna',
-      funkcja: 'Magazynier-Szef',
-      ikona: '📋',
-    },
-  ];
-
   return (
     <div className='poster'>
-      {/* Dekoracyjne cenówki w tle */}
-      <div className='bg-decoration'>
-        <div className='price-tag red' style={{ top: '5%', left: '5%' }}>
-          -50%
-        </div>
-        <div className='price-tag yellow' style={{ top: '10%', right: '8%' }}>
-          MEGA!
-        </div>
-        <div className='price-tag red' style={{ top: '45%', left: '3%' }}>
-          HIT!
-        </div>
-        <div
-          className='price-tag yellow'
-          style={{ bottom: '15%', right: '5%' }}
-        >
-          OKAZJA
-        </div>
-        <div className='price-tag red' style={{ bottom: '10%', left: '8%' }}>
-          TOP!
-        </div>
-        <div className='price-tag yellow' style={{ top: '30%', right: '2%' }}>
-          NOWOŚĆ
+      {/* Nagłówek - Tablica Informacyjna */}
+      <div className='header'>
+        <h1 className='logo'>TABLICA INFORMACYJNA</h1>
+      </div>
+
+      {/* Sekcja informacji */}
+      <div className='info-section'>
+        <div className='info-container'>
+          <div className='info-detail'>
+            NAZWA: <span>RADA MIESZKAŃCÓW</span>
+          </div>
+          <div className='info-detail'>
+            AKADEMIK: <span>DS BRATNIAK-MUSZELKA</span>
+          </div>
+          <div className='info-detail'>
+            KADENCJA: <span>2026</span>
+          </div>
+          <div className='info-detail'>
+            PRZEWODNICZĄCA: <span>IZABELA GOLBA</span>
+          </div>
+          <div className='info-detail'>
+            KIEROWNIK BUDOWY: <span>DAWID CYBULSKI</span>
+          </div>
+          <div className='info-detail'>
+            KIEROWNIK ROBÓT: <span>OSKAR BIWEJNIS</span>
+          </div>
+          <div className='info-detail'>
+            INSPEKTOR NADZORU: <span>DAWID SIDOROWICZ</span>
+          </div>
+          <div className='info-detail'>
+            PROJEKTANT: <span>SZYMON ŻACZEK</span>
+          </div>
+          <div className='info-detail'>
+            WYKONAWCA: <span>KRZYSZTOF WRÓBEL</span>
+          </div>
         </div>
       </div>
 
-      <div className='content'>
-        {/* Nagłówek */}
-        <div className='header'>
-          <div className='logo'>🏗️ Sklep Budowlany</div>
-          <div className='subtitle'>Rada Mieszkańców DS Bratniak-Muszelka</div>
+      {/* Sekcja tytułu członków */}
+      <div className='members-section-title'>
+        <h2 className='section-label'>CZŁONKOWIE RADY</h2>
+      </div>
+
+      {/* Grid członków */}
+      <div className='members-grid'>
+        {/* Pierwszy członek - Przewodnicząca na środku */}
+        <div className='member-featured'>
+          <Czlonek
+            zdjecie={czlonkowie[0].zdjecie}
+            nazwa={czlonkowie[0].nazwa}
+          />
         </div>
 
-        {/* Główny produkt - Przewodnicząca */}
-        <Przewo />
-
-        {/* Sekcja akcesoriów */}
-        <div className='accessories-section'>
-          <div className='section-title'>
-            🔧 W ZESTAWIE TANIEJ - AKCESORIA NIEZBĘDNE 🔨
-          </div>
-
-          <div className='accessories-grid'>
-            {czlonkowie.map((czlonek, index) => (
-              <Czlonek
-                key={index}
-                zdjecie={czlonek.zdjecie}
-                nazwa={czlonek.nazwa}
-                moc={czlonek.moc}
-                funkcja={czlonek.funkcja}
-                ikona={czlonek.ikona}
-              />
-            ))}
-          </div>
+        {/* Pozostali członkowie w siatce 3x2 */}
+        <div className='members-regular'>
+          {czlonkowie.slice(1).map((czlonek, index) => (
+            <Czlonek
+              key={index + 1}
+              zdjecie={czlonek.zdjecie}
+              nazwa={czlonek.nazwa}
+            />
+          ))}
         </div>
+      </div>
 
-        {/* Banner promocyjny */}
-        <div className='promo-banner'>
-          ⚠️ KUPUJĄC CAŁY ZESPÓŁ = GRATIS: DOBRY HUMOR I ZAANGAŻOWANIE! ⚠️
-        </div>
+      {/* Stopka kontakt */}
+      <div className='contact-footer'>
+        <div className='contact-title'>KONTAKT DO RADY</div>
       </div>
     </div>
   );
