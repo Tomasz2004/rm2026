@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial Black', Arial, sans-serif;
+  background: white;
+  padding: 20px;
+}
+
+.poster {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dekoracyjne cenówki w tle */
+.bg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.price-tag {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  opacity: 0.15;
+}
+
+.red {
+  background: #e31e24;
+  color: white;
+}
+
+.yellow {
+  background: #ffd500;
+  color: #e31e24;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo i nagłówek */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #e31e24 0%, #c41e3a 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(227, 30, 36, 0.3);
+}
+
+.logo {
+  font-size: 48px;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #ffd500;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Sekcja główna - Przewodnicząca */
+.main-product {
+  background: linear-gradient(135deg, #ffd500 0%, #ffed4e 100%);
+  border: 8px solid #e31e24;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hit-badge {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e31e24;
+  color: white;
+  padding: 15px 40px;
+  font-size: 32px;
+  font-weight: 900;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(227, 30, 36, 0.5);
+  text-transform: uppercase;
+}
+
+.main-photo {
+  width: 300px;
+  height: 350px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border: 5px solid white;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.helmet-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+}
+
+.main-description {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-title {
+  font-size: 36px;
+  color: #e31e24;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.specs {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 2px dotted #ddd;
+  font-size: 18px;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.spec-value {
+  color: #e31e24;
+  font-weight: 900;
+}
+
+/* Sekcja akcesoria */
+.accessories-section {
+  margin-top: 50px;
+}
+
+.section-title {
+  font-size: 42px;
+  color: #e31e24;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  background: #ffd500;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: 900;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accessories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.accessory-card {
+  background: white;
+  border: 5px solid #e31e24;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accessory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(227, 30, 36, 0.3);
+}
+
+.accessory-photo {
+  width: 180px;
+  height: 220px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border: 3px solid #ffd500;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  overflow: hidden;
+}
+
+.accessory-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.accessory-name {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.accessory-spec {
+  font-size: 14px;
+  color: #666;
+  background: #fff9e6;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.tool-icon {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/* Promocyjna ramka */
+.promo-banner {
+  background: #e31e24;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 15px;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(227, 30, 36, 0.4);
+}
+
+@media (max-width: 768px) {
+  .accessories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accessories-grid {
+    grid-template-columns: 1fr;
+  }
+}
