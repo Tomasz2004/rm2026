@@ -1,31 +1,31 @@
 const czlonkowie = [
   {
-    zdjecie: '/iza.jpeg',
+    zdjecie: '/iza.jpg',
     nazwa: 'PRZEWODNICZĄCA',
     imieNazwisko: 'Izabela Golba',
   },
   {
-    zdjecie: '/dawidcyb.jpeg',
+    zdjecie: '/dawidcyb.jpg',
     nazwa: 'KIEROWNIK BUDOWY',
     imieNazwisko: 'Dawid Cybulski',
   },
   {
-    zdjecie: '/oskar.jpeg',
+    zdjecie: '/oskar.jpg',
     nazwa: 'KIEROWNIK ROBÓT',
     imieNazwisko: 'Oskar Biwejnis',
   },
   {
-    zdjecie: '/dawidsid.jpeg',
+    zdjecie: '/dawidsid.jpg',
     nazwa: 'INSPEKTOR NADZORU',
     imieNazwisko: 'Dawid Sidorowicz',
   },
   {
-    zdjecie: '/szymon.jpeg',
+    zdjecie: '/szymon.jpg',
     nazwa: 'PROJEKTANT',
     imieNazwisko: 'Szymon Żaczek',
   },
   {
-    zdjecie: '/krzysiek.jpeg',
+    zdjecie: '/krzysiek.jpg',
     nazwa: 'WYKONAWCA',
     imieNazwisko: 'Krzysztof Wróbel',
   },
